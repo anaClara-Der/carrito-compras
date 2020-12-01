@@ -1,0 +1,18 @@
+#carrito-desplegable{
+    background-color: var(--marronOscuro);
+    width: 35vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+    padding: 40px 50px;
+    display: none;
+    border-radius: 10px;
+    color: var(--blanco);
+}
+.carrito-titulo{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
