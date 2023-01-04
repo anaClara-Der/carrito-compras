@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Harry</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/carrito.css">
+    <link rel="stylesheet" href="style/movil.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <i id="hamburguesa-movil" class= "fas fa-bars"></i>
+        <i id="menu-cerrar" class="far fa-times-circle"></i>
+        <nav id="nav-movil">
+            <ul class="nav-ul-movil">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <img class="logo" src="img/loog.png" alt="logo hogwarts">
+        <nav id="nav">
+            <ul class="nav-ul">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <i class="icono-carrito fas fa-cart-plus"> <span class="span-carrito"></span></i>
+       
+  
+        <div id="carrito-desplegable">  <!--se despliega al hacer click en el carrito-->
+            <div class="carrito-titulo">
+                <h2 class="carrito-h2">Carrito de compras</h2>
+                <i class="icono-carrito fas fa-times"></i>
+            </div>
+            <table id="table-productos">
+                <tr class="table-head">
+                    <td>Producto</td>
+                    <td>cantidad</td>
+                    <td>Accion</td>
+                    <td>Total</td>
+                </tr>
+                <tbody id="table-elegidos">
+                </tbody>
+            </table>
+            <div id="table-total">
+                <p class="total-carrito-vacio">El carrito esta vacío. Comienza a comprar!</p>
+            </div>
+        </div>
+    </header>
+    
+    <section id="container">
+        <div id="listado-tarjetas">
+            <!--va el template card-->
+        </div>
+    </section>
+    <!--TEMPLATES-->
+    <!--Cads productos-->
+    <template id="template-card">
+        <div class="contenedor-card">
+            <img class="template-img" src="" alt="">
+            <div class="card-descripcion">
+                <h3 class="template-h3"></h3>
+                <p class="template-p">$ </p>
+                <button class="card-button">Comprar</button>
+            </div>
+        </div>
+    </template>
+    <!--table con productos elegidos-->
+    <template id="template-productos">
+        <tr>
+            <td class="table-producto"></td>
+            <td class="table-cantidad"></td>
+            <td class="btn">
+                <button class="table-btn btn-mas">+</button>
+                <button class="table-btn btn-menos">-</button>
+            </td>
+            <td class="total">$ </td>
+        </tr>
+    </template>
+    <!--vaciar-->
+    <template id="template-vaciar">
+        <td class="vaciar-productos">Total productos: </td>
+        <td class="vaciar-cantidad"></td>
+        <td>
+            <button id="vaciar-btn">Vaciar</button>
+        </td>
+        <td class="vaciar-total"></td>
+    </template>
+    <script src="js/index.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/movil.js"></script>
+    <script src="https://kit.fontawesome.com/d9e2ae4403.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

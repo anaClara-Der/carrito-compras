@@ -1,0 +1,74 @@
+@media (max-width: 1024px) {
+  #container{
+      width: 80%;
+      margin: 100px auto 10px auto;
+  }
+  #nav {
+    display: none;
+  }
+  /*nav*/
+  #header {
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+  #hamburguesa-movil {
+    display: inline-block;
+    color: var(--blanco);
+    font-size: 25px;
+    position: relative;
+  }
+  #nav-movil {
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 10px;
+  }
+  .nav-ul-movil {
+    background-color: var(--marronOscuro);
+    padding: 10px;
+  }
+  .nav-ul-movil li {
+    list-style: none;
+    padding: 10px;
+  }
+  .nav-ul-movil a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 20px;
+  }
+  #menu-cerrar {
+    display: none;
+    color: var(--blanco);
+    font-size: 25px;
+    position: relative;
+  }
+    /*carrito*/
+    #carrito-desplegable{
+        width: 60vw;
+    }
+  /*Tarjetas*/
+  #listado-tarjetas {
+    grid-template-columns: 1fr 1fr;
+  }
+  h3, p, .card-button{
+      font-size: 20px;
+  }
+ 
+}
+
+@media (max-width: 700px) {
+  /*nav*/
+  #header {
+    padding: 15px 25px;
+  }
+    /*carrito*/
+    #carrito-desplegable{
+        width: 90vw;
+    }
+  /*Tarjetas*/
+  #listado-tarjetas {
+    grid-template-columns: 1fr;
+  }
+}

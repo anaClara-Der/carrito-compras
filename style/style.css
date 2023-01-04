@@ -1,0 +1,198 @@
+:root {
+  --marron: #d2b48c;
+  --marronOscuro: #c4a57e;
+  --blanco: #fffafa;
+  --marronRgba: rgba(210, 180, 140, 0.5);
+  --btnVaciar: #a52a2a;
+  --btnMenos: #cd5c5c;
+  --btnMas: #228b22;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "PT Sans Narrow", sans-serif;
+  background-color: #fffafa;
+}
+#container {
+  margin: 25px auto;
+  width: 90%;
+}
+/*No aparece en versión escritorio*/
+#hamburguesa-movil{
+  display: none;
+}
+#nav-movil{
+  display: none;
+}
+
+#menu-cerrar{
+  display: none;
+}
+
+/*NAV*/
+#header {
+  width: 100vw;
+  display: flex;
+  background-color: var(--marron);
+  padding: 20px 50px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 var(--marronRgba);
+  position: relative;
+}
+.logo {
+  width: 70px;
+}
+.nav-ul {
+  display: flex;
+}
+.nav-ul li {
+  list-style: none;
+  margin: 20px;
+}
+.nav-ul a {
+  text-decoration: none;
+  color: var(--blanco);
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.nav-ul a:hover {
+  border-bottom: 2px solid var(--blanco);
+}
+.icono-carrito{
+  color: var(--blanco);
+  font-size: 25px;
+  cursor: pointer;
+  position: relative;
+}
+.span-carrito{
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 10px;
+  color: var(--blanco);
+  background-color: var(--marronOscuro) ;
+  border: solid 1px var(--blanco);
+  padding: 5px;
+  border-radius: 55%;
+}
+
+/*Productos tarjetas*/
+#listado-tarjetas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+}
+.contenedor-card {
+  display: inline-block;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.template-img {
+  width: 100%;
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.card-descripcion {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+h3 {
+  font-size: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+p {
+  margin-bottom: 15px;
+}
+.card-button {
+  background-color: var(--marronOscuro);
+  color: var(--blanco);
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.card-button:hover {
+  opacity: 0.8;
+}
+.card-button:active {
+  transform: scale(0.9);
+  border: none;
+}
+
+/*Carrito*/
+#table-productos {
+  width: 100%;
+  border: 1px solid black;
+  margin-top: 30px;
+  text-align: center;
+  display: none;
+}
+/*titulo de la tabla producto, accion, btn*/
+.table-head td {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+#table-elegidos td,
+.table-head td {
+  padding: 10px;
+}
+.table-btn {
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: none;
+  color: wheat;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+}
+.table-btn:active {
+  transform: scale(0.9);
+}
+.table-btn:hover {
+  opacity: 0.9;
+}
+.btn-mas {
+  background-color: var(--btnMas);
+}
+.btn-menos {
+  background-color: var(--btnMenos);
+}
+/*vaciar*/
+#table-total {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+#vaciar-btn {
+  background-color: var(--btnVaciar);
+  outline: none;
+  border: none;
+  padding: 5px 15px;
+  color: var(--blanco);
+  border-radius: 5px;
+  cursor: pointer;
+}
+#vaciar-btn:hover {
+  opacity: 0.8;
+}
+#vaciar-btn:active {
+  transform: scale(0.9);
+}
+.vaciar-productos {
+  font-weight: bold;
+}
